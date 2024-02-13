@@ -1,3 +1,4 @@
+import './array-prototype/binaryIndex.js';
 import './array-prototype/searchIndexElements.js';
 import './array-prototype/mySort.js';
 import './cutText.js';
