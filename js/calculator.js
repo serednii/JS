@@ -1,13 +1,4 @@
-
-
-
-
-
-
-
-//---------------------------------------------------
-
-
+//https://www.youtube.com/watch?v=DT3tjY1s_qo
 var equation = '3+2+5*4/32*14+4587';
 var operators = equation.split(/[0-9]+/).filter(Boolean); // Extract operators
 var numbers = equation.split(/[\+\-\*\/]/).filter(Boolean); // Extract numbers
