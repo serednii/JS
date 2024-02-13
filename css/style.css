@@ -1,0 +1,44 @@
+.block {
+    width: clamp(200px, 80vw, 400px);
+    background-color: antiquewhite;
+}
+
+.block p {
+    /* font-size: 2rem; */
+    /* font-size: clamp(1rem, 5vw, 4rem); */
+
+    /* position: relative; */
+    /* -webkit-line-clamp: 3; */
+    /* Число отображаемых строк */
+    /* display: -webkit-box; */
+    /* Включаем флексбоксы */
+    /* -webkit-box-orient: vertical; */
+    /* Вертикальная ориентация */
+    /* overflow: hidden; */
+    /* Обрезаем всё за пределами блока */
+    /* white-space: nowrap; */
+}
+
+.text-hidden {
+    /* display: none; */
+    overflow: hidden;
+    /* Обрезаем всё за пределами блока */
+    white-space: nowrap;
+}
+
+.block span {
+    background-color: white;
+    padding: 0 25px 0 8px;
+    /* position: absolute; */
+    right: 0;
+    bottom: 0;
+}
+
+.block button {
+    background-color: transparent;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: green;
+    cursor: pointer;
+}
