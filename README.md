@@ -37,12 +37,10 @@ console.log(getInitial('kostik Loyko'))
 
 # Palindrome
 ```sh
-
-const isPalindrome = (text) => {
-    const reversText = text.split().reverse().join().toLowerCase()
-    return (text.toLowerCase() === reversText)
+const isPalindrome = (word) => {
+    return word === word.split('').reverse().join('')
 }
 
-const rez = isPalindrome('lopol')
+const rez = isPalindrome('radar')
 console.log(rez)
 ```
