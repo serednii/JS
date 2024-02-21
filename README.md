@@ -74,7 +74,7 @@ In Autumn, 2019, I traveled to Croatia, by plane. It was an amazing excursion.
 I'm the kind of person who likes to travel around the world. but there are lots of circumstances, like visa requirements for some countries, and airplane tickets being expensive.
 Countries of North America and East Asia are definitely worth visiting.`
 
-### За допомогою сортіровки час виконання 100000 циклів = 6668ms
+ За допомогою сортіровки час виконання 100000 циклів = 6668ms
 const getShortWord = (string) => {
     return string.split(' ').sort((a, b) => a.length - b.length)[0];
 }
@@ -92,7 +92,7 @@ const getShortWord = (string) => {
      }
      return [minNumber, minWord]
 }
-### Способом одноразового проходу по циклу, з умовою , якщо слово  == 1 символу то ми виходимо час виконання 100000 циклів = 9ms
+Способом одноразового проходу по циклу, з умовою , якщо слово  == 1 символу то ми виходимо час виконання 100000 циклів = 9ms
 const getShortWord = (string) => {
     return string.split(' ').sort((a, b) => a.length - b.length)[0];
      let minNumber = 10000;
@@ -108,7 +108,7 @@ const getShortWord = (string) => {
      return [minNumber, minWord]
 }
 
-### Заміряємо час
+Заміряємо час
 var start = new Date().getTime();
 let rez;
 //визиваємо 100000 разів 
@@ -116,7 +116,7 @@ for (let i = 0; i < 100000; i++) {
     rez = getShortWord(str);
 }
 
-### Кінець замірів
+Кінець замірів
 var end = new Date().getTime();
 var time = end - start;
 
