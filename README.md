@@ -10,8 +10,7 @@
 getSums( arr ) = [ 1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4+5 ] = [ 1, 3, 6, 10, 15 ]
 
 ```sh
-const arr = [ 1, 2, 3, 4, 5,6,7,8,9,10 ];
-const arr = [ 1, 2, 3, 4, 5,6,7,8,9,10 ];
+const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 
 const getSums = (arr)=>{
     return newArr = arr.reduce((a,v,i)=>{
@@ -24,3 +23,14 @@ const getSums = (arr)=>{
   console.log(getSums(arr))
 ```
 
+# Ініціали прізвища і імя
+Повернути строку яка буде вміщувати ініціали імені з великої букви і в кінці кожної букви крапка
+```sh
+const getInitial = (names :string) => {
+    // return names.split(' ').map((e) => e[0].toUpperCase() + '.').join('')
+    return names.split(' ').map((e) => e[0]).join('.').toUpperCase() + '.'
+
+}
+
+console.log(getInitial('kostik Loyko'))
+```
