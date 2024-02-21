@@ -108,7 +108,7 @@ const getShortWord = (string) => {
      return [minNumber, minWord]
 }
 
-## Заміряємо час
+### Заміряємо час
 var start = new Date().getTime();
 let rez;
 //визиваємо 100000 разів 
@@ -116,7 +116,7 @@ for (let i = 0; i < 100000; i++) {
     rez = getShortWord(str);
 }
 
-//Кінець замірів
+### Кінець замірів
 var end = new Date().getTime();
 var time = end - start;
 
