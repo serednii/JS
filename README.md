@@ -34,3 +34,15 @@ const getInitial = (names :string) => {
 
 console.log(getInitial('kostik Loyko'))
 ```
+
+#Palindrome
+```sh
+
+const isPalindrome = (text) => {
+    const reversText = text.split().reverse().join().toLowerCase()
+    return (text.toLowerCase() === reversText)
+}
+
+const rez = isPalindrome('lopol')
+console.log(rez)
+```
