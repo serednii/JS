@@ -47,7 +47,7 @@ console.log(rez)
 
 # пошук найкоротшого слова в тексті
 
-'''sh
+```sh
 const str = `I live in Algeria, the biggest country in Africa. In Algeria the distance between a city in the North and another city in the south is much more tall than the distance between Algeria's north and France, so for far destinations in Algeria, I usually take a plane.
 In the last summer, I visited Tunisia, using my own car.
 In Autumn, 2019, I traveled to Croatia, by plane. It was an amazing excursion.
