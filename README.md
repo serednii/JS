@@ -79,7 +79,7 @@ const getShortWord = (string) => {
     return string.split(' ').sort((a, b) => a.length - b.length)[0];
 }
 
-### Способом одноразового проходу по циклу час виконання 100000 циклів = 93ms
+ Способом одноразового проходу по циклу час виконання 100000 циклів = 93ms
 const getShortWord = (string) => {
      let minNumber = 1000; // найкоротша довжина слова
      let minWord = ''; // найкоротше слово
