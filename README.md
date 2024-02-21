@@ -12,7 +12,7 @@ getSums( arr ) = [ 1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4+5 ] = [ 1, 3, 6, 10, 15 ]
 ```sh
 const arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 
-const getSums = (arr)=>{
+const (arr)=>{
     return newArr = arr.reduce((a,v,i)=>{
         a.push(!!i ? (a[i-1] + v) : v);
         return a;
