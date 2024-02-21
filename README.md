@@ -35,7 +35,7 @@ const getInitial = (names :string) => {
 console.log(getInitial('kostik Loyko'))
 ```
 
-#Palindrome
+# Palindrome
 ```sh
 
 const isPalindrome = (text) => {
