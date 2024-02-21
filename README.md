@@ -44,3 +44,83 @@ const isPalindrome = (word) => {
 const rez = isPalindrome('radar')
 console.log(rez)
 ```
+
+# пошук найкоротшого слова в тексті
+
+'''sh
+const str = `I live in Algeria, the biggest country in Africa. In Algeria the distance between a city in the North and another city in the south is much more tall than the distance between Algeria's north and France, so for far destinations in Algeria, I usually take a plane.
+In the last summer, I visited Tunisia, using my own car.
+In Autumn, 2019, I traveled to Croatia, by plane. It was an amazing excursion.
+I'm the kind of person who likes to travel around the world. but there are lots of circumstances, like visa requirements for some countries, and airplane tickets being expensive.
+Countries of North America and East Asia are definitely worth visiting.
+I live in Algeria, the biggest country in Africa. In Algeria the distance between a city in the North and another city in the south is much more tall than the distance between Algeria's north and France, so for far destinations in Algeria, I usually take a plane.
+In the last summer, I visited Tunisia, using my own car.
+In Autumn, 2019, I traveled to Croatia, by plane. It was an amazing excursion.
+I'm the kind of person who likes to travel around the world. but there are lots of circumstances, like visa requirements for some countries, and airplane tickets being expensive.
+Countries of North America and East Asia are definitely worth visiting.
+I live in Algeria, the biggest country in Africa. In Algeria the distance between a city in the North and another city in the south is much more tall than the distance between Algeria's north and France, so for far destinations in Algeria, I usually take a plane.
+In the last summer, I visited Tunisia, using my own car.
+In Autumn, 2019, I traveled to Croatia, by plane. It was an amazing excursion.
+I'm the kind of person who likes to travel around the world. but there are lots of circumstances, like visa requirements for some countries, and airplane tickets being expensive.
+Countries of North America and East Asia are definitely worth visiting.
+I live in Algeria, the biggest country in Africa. In Algeria the distance between a city in the North and another city in the south is much more tall than the distance between Algeria's north and France, so for far destinations in Algeria, I usually take a plane.
+In the last summer, I visited Tunisia, using my own car.
+In Autumn, 2019, I traveled to Croatia, by plane. It was an amazing excursion.
+I'm the kind of person who likes to travel around the world. but there are lots of circumstances, like visa requirements for some countries, and airplane tickets being expensive.
+Countries of North America and East Asia are definitely worth visiting.
+I live in Algeria, the biggest country in Africa. In Algeria the distance between a city in the North and another city in the south is much more tall than the distance between Algeria's north and France, so for far destinations in Algeria, I usually take a plane.
+In the last summer, I visited Tunisia, using my own car.
+In Autumn, 2019, I traveled to Croatia, by plane. It was an amazing excursion.
+I'm the kind of person who likes to travel around the world. but there are lots of circumstances, like visa requirements for some countries, and airplane tickets being expensive.
+Countries of North America and East Asia are definitely worth visiting.`
+
+### За допомогою сортіровки час виконання 100000 циклів = 6668ms
+const getShortWord = (string) => {
+    return string.split(' ').sort((a, b) => a.length - b.length)[0];
+}
+
+### Способом одноразового проходу по циклу час виконання 100000 циклів = 93ms
+const getShortWord = (string) => {
+     let minNumber = 1000; // найкоротша довжина слова
+     let minWord = ''; // найкоротше слово
+     const arrStr = string.split(' ');
+     for (let i = 0; i < arrStr.length; i++) {
+         if (arrStr[i].length < minNumber) {
+             minNumber = arrStr[i].length;
+             minWord = arrStr[i];
+         }
+     }
+     return [minNumber, minWord]
+}
+### Способом одноразового проходу по циклу, з умовою , якщо слово  == 1 символу то ми виходимо час виконання 100000 циклів = 9ms
+const getShortWord = (string) => {
+    return string.split(' ').sort((a, b) => a.length - b.length)[0];
+     let minNumber = 10000;
+     let minWord = '';
+     const arrStr = string.split(' ');
+     for (let i = 0; i < arrStr.length; i++) {
+         if (arrStr[i].length < minNumber) {
+             minNumber = arrStr[i].length;
+             minWord = arrStr[i];
+         }
+          if (minNumber === 1) break; //Якщо довжина слова == 1 то вихід
+     }
+     return [minNumber, minWord]
+}
+
+## Заміряємо час
+var start = new Date().getTime();
+let rez;
+//визиваємо 100000 разів 
+for (let i = 0; i < 100000; i++) {
+    rez = getShortWord(str);
+}
+
+//Кінець замірів
+var end = new Date().getTime();
+var time = end - start;
+
+
+console.log(rez)
+console.log('Время выполнения = ' + time);
+```
