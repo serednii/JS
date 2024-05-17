@@ -1,0 +1,5 @@
+{
+    "csscomb.syntaxAssociations": {
+        "postcss": "scss"
+    }
+}

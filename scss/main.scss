@@ -1,0 +1,27 @@
+// базовые подключения
+@import "fonts";
+@import "vars";
+@import "bootstrap.min";
+@import "mixins";
+@import "settings";
+@import "mixins/validate";
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/logo";
+@import "./components/about";
+@import "./components/services";
+@import "./components/price";
+@import "./components/card";
+@import "./components/contact";
+@import "./components/footer";
+
+
+
+
+// тестовые стили, удалите их
+.page__body {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // height: var(--vh);
+}
